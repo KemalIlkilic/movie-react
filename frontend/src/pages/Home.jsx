@@ -1,5 +1,6 @@
 import MovieCard from "../components/MovieCard";
 import { useState } from "react";
+import "../css/Home.css";
 
 function Home() {
   //Triggers re-renders when updated
@@ -28,9 +29,9 @@ function Home() {
     <div className="home">
       <form onSubmit={handleSearch} className="search-form">
         <input
+          className="search-input"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          className="search-input"
           type="text"
           placeholder="Search for movies"
         />
